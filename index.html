@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Specificity Guide</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header">
+        <h1>CSS Specificity Guide</h1>
+    </div>
+
+    <div class="section">
+        <h2>Introduction</h2>
+        <p id="intro">CSS specificity is a set of rules that determines which styles are applied to an element when there are conflicting CSS rules. Understanding specificity is crucial for writing efficient and maintainable CSS code.</p>
+    </div>
+
+    <div class="section">
+        <h2>Specificity Hierarchy</h2>
+        <ul class="specificity-list">
+            <li><span>Inline styles</span> (Highest specificity)</li>
+            <li><span>IDs</span></li>
+            <li><span>Classes, attributes, and pseudo-classes</span></li>
+            <li><span>Elements and pseudo-elements</span> (Lowest specificity)</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Calculating Specificity</h2>
+        <p>Specificity is calculated as a four-part value: a-b-c-d</p>
+        <ul>
+            <li>a: Inline styles</li>
+            <li>b: Number of ID selectors</li>
+            <li>c: Number of class, attribute, and pseudo-class selectors</li>
+            <li>d: Number of element and pseudo-element selectors</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Example</h2>
+        <div id="example">
+            #header .nav li:hover a {
+                color: red;
+            }
+
+            /* Specificity: 0-1-2-2 */
+        </div>
+    </div>
+
+    <div id="footer">
+        <p>&copy; 2024 CSS Specificity Guide. All rights reserved.</p>
+    </div>
+</body>
+</html>
